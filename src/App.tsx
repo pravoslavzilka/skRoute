@@ -4,6 +4,7 @@ import viteLogo from '/vite.svg'
 import './App.css'
 import ListView from './components/ListView'
 import LoginForm from './components/LoignForm'
+import NoMatch from './components/NoMatch'
 import { Routes, Route } from 'react-router-dom';
 
 
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<LoginForm />} />
             <Route path="/output" element={<ListView />} />
             <Route path="/about" element={<h1>Helo </h1>} />
+            <Route path="*" element={<NoMatch />} />
          </Routes>
 
         

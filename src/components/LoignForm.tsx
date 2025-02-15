@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { ChevronRight } from 'lucide-react';
 import './comp.css'
+import { useNavigate } from "react-router-dom";
 
 interface SliderData {
   id: number;
@@ -14,6 +15,8 @@ interface FormData {
   mainSlider: number;
   customSliders: SliderData[];
 }
+
+
 
 const LoginForm = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -30,6 +33,8 @@ const LoginForm = () => {
     ]
   });
 
+
+
   const [editingId, setEditingId] = useState<number | null>(null);
   const [tempName, setTempName] = useState<string>('');
 
@@ -41,6 +46,12 @@ const LoginForm = () => {
       )
     }));
   };
+
+  const navigate = useNavigate();
+
+  const goToOutput = () => {
+    navigate("/output");
+  };  
 
   const handleMainSliderChange = (value: number) => {
     setFormData(prev => ({
@@ -174,6 +185,7 @@ const LoginForm = () => {
 
           <div className="flex space-x-4">
             <button
+              onClick={goToOutput}
               type="submit"
               className="flex-1 bg-white/20 hover:bg-white/30 text-white rounded-lg py-3 px-4 flex items-center justify-center space-x-2 transition-colors duration-200"
             >

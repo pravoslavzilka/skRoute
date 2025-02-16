@@ -50,6 +50,7 @@ const LoginForm = () => {
   const navigate = useNavigate();
 
   const goToOutput = () => {
+    console.log(formData);
     navigate("/output");
   };  
 

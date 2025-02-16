@@ -94,7 +94,7 @@ const LoginForm = () => {
   return (
     <div className="min-h-screen w-screen flex items-center justify-center bg-[#1c5364] p-4">
       {/* Modified inner container with specific width */}
-      <div  className="  bg-white/10 backdrop-blur-lg text-white rounded-lg p-8 max-w-6xl">
+      <div max-w-6xl className="  bg-white/10 backdrop-blur-lg text-white rounded-lg p-8 ">
         <div className="text-center mb-8">
           <h1 className="text-3xl font-bold mb-2">skRoute</h1>
         </div>
